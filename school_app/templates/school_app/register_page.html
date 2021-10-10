@@ -1,0 +1,26 @@
+{% extends 'school_app/base_page.html' %} {% load static %} {% block content %}
+<div class="container d-inline-flex justify-content-between">
+<form method="POST" action="" class="">
+{% csrf_token %}
+<div class="form-box" style="height: 430px; margin-top: 10px; background-image:; ">
+<div class="container">
+<h3>Sign Up</h3>
+<input class="form-control" type="text" name="userid" placeholder="USER ID" required>
+<input class="form-control" type="text" name="username" placeholder="USERNAME" required>
+<select class="form-select" style="margin-bottom: 10px;" name="usertype" id="in">
+    <option value="Student">Student</option>
+    <option value="Faculty">Faculty</option>
+    <option value="Admin" selected>Admin</option>
+</select>
+<input class="form-control" type="password" name="passwordone" placeholder="PASSWORD" required>
+<input class="form-control" type="password" name="passwordtwo" placeholder="PASSWORD CONFIRMATION" required>
+<button type="submit" name="signup" value="signup" id="bt"><b>Sign Up</b></button>
+</div>
+
+</div>
+</form>
+<div><img src="{% static 'images/signup.jpg' %}" width="300px" height="300px" style="border-radius: 50%;"></img></div>
+</div>
+
+
+{% endblock content %}

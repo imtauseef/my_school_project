@@ -1,0 +1,22 @@
+{% extends 'school_app/base_page.html' %} {% block content %}
+
+<form method="POST" action="">
+{% csrf_token %}
+    <div class="form-box" style="height: 320px;">
+        <div class="container">
+            <h3>Gateway To Enter School I-D</h3>
+
+            <input placeholder="USER_ID" id="in" type="text" name="userid" required>
+            <select class="form-select" name="usertype" id="in">
+            <option value="Student">Student</option>
+            <option value="Faculty">Faculty</option>
+            <option value="Admin" selected>Admin</option>
+            </select>
+            <input placeholder="PASSWORD" id="in" type="password" name="userpassword" required>
+
+            <button type="submit" name="update" value="Update" id="bt"><b>Login</b></button>
+        </div>
+    </div>
+</form>
+
+{% endblock content %}

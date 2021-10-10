@@ -1,0 +1,55 @@
+{% extends 'school_app/base_page.html' %} {% block content %}
+<section style="width: 70%; margin: 20px auto; border: 1px solid green; padding: 10px;">
+<form method="POST" action="">
+{% csrf_token %}
+<div class="form-group row m-3">
+    <label for="teacherUser" class="col-sm-2 col-form-label" style="margin-left: 10px;">{{ myform.user.label }}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+      <!-- <input type="text" class="form-control" id="teacheruser" placeholder="user" required> -->
+      {{ myform.user }}
+    </div>
+  </div>
+  <div class="form-group row m-3">
+    <label for="teacherName" class="col-sm-2 col-form-label" style="margin-left: 10px;">{{ myform.teacher_name.label }}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+    <!--  <input type="text" class="form-control" id="teachername" placeholder="Teacher Name" required> -->
+    {{ myform.teacher_name }}
+    </div>
+  </div>
+  <div class="form-group row m-3">
+    <label for="staticEmail" class="col-sm-2 col-form-label" style="margin-left: 10px;">{{ myform.email_id.label }}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+    <!--  <input type="email" class="form-control" id="inputemail" placeholder="email@gmail.com"> -->
+    {{ myform.email_id }}
+    </div></div>
+    <div class="form-group row m-3">
+    <label for="PhoneNumber" class="col-sm-2 col-form-label" style="margin-left: 10px;">{{ myform.teacher_phone.label }}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+    <!--  <input type="number" class="form-control" id="phonenumber" placeholder="Phone Number"> -->
+    {{ myform.teacher_phone }}
+    </div></div>
+    <div class="form-group row m-3">
+    <label for="subjectSpeciality" class="col-sm-2 col-form-label" style="margin-left: 10px;">{{ myform.subject_speciality.label }}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+    <!--  <input type="text" class="form-control" id="subjectspeciality" placeholder="Enter subject"> -->
+    {{ myform.subject_speciality }}
+    </div></div>
+    <div class="form-group row m-3">
+    <label for="qualification" class="col-sm-2 col-form-label" style="margin-left: 10px;">{{ myform.qualification.label }}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+    <!--  <input type="text" class="form-control" id="qualification" placeholder="Enter qualification"> -->
+    {{ myform.qualification }}
+    </div></div>
+    <div class="form-group row m-3">
+    <label for="pat" class="col-sm-2 col-form-label" style="margin-left: 10px;">{{ myform.current_pat.label }}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+    <!--  <input type="text" class="form-control" id="pat" placeholder="projects or assignments teacher holds for students"> -->
+    {{ myform.current_pat }}
+    </div></div>
+
+    <button class="btn btn-primary" type="submit" style="margin-left: 450px;">Submit</button>
+</form>
+</section>
+
+
+{% endblock content %}

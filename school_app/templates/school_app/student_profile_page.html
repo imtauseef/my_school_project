@@ -1,0 +1,63 @@
+{% extends 'school_app/base_page.html' %} {% block content %}
+<section style="width: 70%; margin: 20px auto; border: 1px solid green; padding: 10px;">
+<form method="POST" action="">
+{% csrf_token %}
+  <div class="form-group row m-3">
+    <label for="studentuser" class="col-sm-2 col-form-label" style="margin-left: 10px;">{{ myform.user.label }}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+     <!-- <input type="text" class="form-control" id="studentname" name="stname" placeholder="Student Name" required>
+  -->{{ myform.user }}  </div>
+  </div>
+  <div class="form-group row m-3">
+    <label for="studentName" class="col-sm-2 col-form-label" style="margin-left: 10px;">{{ myform.student_name.label }}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+     <!-- <input type="text" class="form-control" id="studentname" name="stname" placeholder="Student Name" required>
+  -->{{ myform.student_name }}  </div>
+  </div>
+  <div class="form-group row m-3">
+    <label for="gradeClass" class="col-sm-2 col-form-label" style="margin-left: 10px;" >{{ myform.gradeclass.label }}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+   <!--  <select class="form-select" name="stgrade" id="id_grade" required>
+            <option disabled selected>  --Select Grade class--  </option>
+            {% for grad in grade_nums %}
+            <option value="{{ grad.grade }}">{{ grad.grade }}th Grade</option>
+            
+            {% endfor %}
+            </select> -->
+            {{ myform.gradeclass }}
+      </div>
+    </div>
+  <div class="form-group row m-3">
+    <label for="staticEmail" class="col-sm-2 col-form-label" style="margin-left: 10px;">{{ myform.email_id.label}}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+      <!-- <input type="email" class="form-control" id="inputemail" name="stemail" placeholder="email@gmail.com">
+   --> {{ myform.email_id }} </div></div>
+    <div class="form-group row m-3">
+    <label for="PhoneNumber" class="col-sm-2 col-form-label" style="margin-left: 10px;">{{ myform.student_phone.label }}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+     <!-- <input type="number" class="form-control" id="phonenumber" name="stphone" placeholder="Phone Number">
+   --> {{ myform.student_phone }} </div></div>
+
+    <div class="form-group row m-3">
+    <label for="gradeClass" class="col-sm-2 col-form-label" style="margin-left: 10px;">{{ myform.field_of_study.label }}</label>
+    <div class="col-sm-8" style="margin-left: 50px">
+      <!-- <select class="form-select" name="stfos" id="fos_id">
+        <option disabled selected>  --Select Grade class--  </option>
+        <option value="">Arts</option>
+        <option value="">Computer Science</option>
+        <option value="">General Science</option>
+      </select> --> {{ myform.field_of_study }}
+    </div></div>
+    <button class="btn btn-primary" type="submit" style="margin-left: 450px;">Submit</button>
+</form>
+</section>
+
+<!--
+<form method="POST" action="">
+{% csrf_token %}
+{{ myform }}
+<input type="submit" value="Submit" class="btn btn-primary">
+</form> -->
+
+
+{% endblock content %}

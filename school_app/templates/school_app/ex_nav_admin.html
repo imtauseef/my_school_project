@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-white bg-dark shadow align-items-center">
+  <div class="collapse container navbar-collapse align-items-center" id="navbarNav">
+    <ul class="navbar-nav col d-flex justify-content-between">
+      <li class="nav-item active">
+        <a class="nav-link fonts1" href="{% url 'all_grades' %}">View student</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fonts1" href="{% url 'all_faculties' %}">View Faculty</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fonts1" href="{% url 'search_student' %}">Search Student</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fonts1" href="{% url 'search_faculty' %}">Search Faculty</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fonts1" href="">Add Student/Faculty</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link fonts1" href="">Add PAT</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link fonts1" href="{% url 'adminuser_page' %}">{{ request.user.username }}</a>
+      </li>
+    </ul>
+  </div>
+</nav>

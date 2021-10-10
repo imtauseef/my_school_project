@@ -1,0 +1,48 @@
+{% extends 'school_app/base_page.html' %}
+
+{% block content %}
+<div class="container">
+<div class="searchform" style="margin-top: -30px; margin-left: -22px;">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="form-box col" style="height: 200px;">
+            <div style="margin: 20px 5px auto 5px;">
+            <input class="form-control" id="sst" name="studentname" placeholder="Enter student Name" type="text">
+            <button class="" type="search" name="search" value="search" id="search-faculty"><b>SEARCH Student</b></button>
+            </div>
+        </div>
+    </form>
+</div></div>
+<div>
+<br>
+    <div class="container">
+
+        <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Student Id</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Subject Speciality</th>
+                <th scope="col">Email Id</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Qualification</th>
+                <th scope="col"></th>
+            </tr></thead>
+
+            {% if request.POST %} {% for student in student_searched %}
+            <tr>
+                <td>{{ student.user }}
+                <td>{{ student.student_name }}</td>
+                <td>{{ student.gradeclass }}</td>
+                <td>{{ student.email_id }}</td>
+                <td>{{ student.student_phone }}</td>
+                <td>{{ student.field_of_study }}</td>
+                <td><a href="">Details</a></td>
+            </tr>
+            {% endfor %} {% endif %}
+
+        </table>
+    </div>
+</div>
+
+{% endblock content %}

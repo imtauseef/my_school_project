@@ -1,0 +1,49 @@
+{% extends 'school_app/base_page.html' %} {% block content %}
+<div class="searchform">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="form-box" style="height: 320px;">
+            <div class="container">
+            <h3>Class:</h3>
+            <select class="form-select" name="s_grade" id="id_grade">
+            <option disabled selected>  --Select Grade class--  </option>
+            {% for grad in grade_nums %}
+            <option value="{{ grad.id }}">{{ grad.grade }}th Grade</option>
+            
+            {% endfor %}
+            </select>
+            <button class="btn btn-primary" type="submit">SEARCH</button>
+
+        </div>
+    </form>
+</div>
+<div>
+    <div class="studentlist">
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Grade</th>
+                <th>Email Id</th>
+                <th>Phone</th>
+                <th>Field of Study</th>
+            </tr>
+
+            {% if request.POST %}
+            {% for students in all_students_searched %}
+            <tr>
+                <td>{{ students.student_name }}</td>
+                <td>{{ students.gradeclass }}</td>
+                <td>{{ students.email_id }}</td>
+                <td>{{ students.student_phone }}</td>
+                <td>{{ students.field_of_study }}</td>
+            </tr>
+            {% endfor %} {% endif %}
+
+        </table>
+    </div>
+</div>
+
+
+
+{% endblock content %}

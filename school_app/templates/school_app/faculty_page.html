@@ -1,0 +1,42 @@
+{% extends 'school_app/base_page.html' %} {% load static %} {% block content %}
+<!--
+<form method="POST" action="">
+    <div class="form-box mx-auto">
+        <input placeholder="Faculty Id" id="in" type="text" name="fid">
+        <input placeholder="Name" id="in" type="text" name="faname">
+        <input placeholder="Email" id="in" type="email" name="faemail">
+        <input placeholder="Phone" id="in" type="text" name="faphone">
+        <input placeholder="Password" id="in" type="password" name="fapass">
+        <input placeholder="Qualification" id="in" type="text" name="faqualification">
+
+        <button type="submit" name="update" value="Update" id="bt">Update</button>
+        <button><a href="" class="button" style="color: white; text-decoration: None;">Delete</a></button>
+    </div>
+</form>
+-->
+
+<div class="my-4 container d-flex justify-content-between">
+    <div class="table-col">
+        <div class="card" style="width: 10rem;">
+            <figure>
+                <img class="card-img-top" src="{% static 'images/zama_aks.jpg' %}" alt="Card image cap">
+                <figcaption><small>Name:</small> {{  fac_data.teacher_name }}</figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class="table-col" style="width: 45%; border-left: 1px solid black; border-right: 1px solid black; padding: 5px;">
+        <h3>Profile</h3>
+        <article>
+                <p class="text-lg m-3">
+                    Faculty Id: {{ fac_data.user }} <br> Email Id: {{ fac_data.email_id }} <br> Phone Number: +92{{ fac_data.teacher_phone }} <br> Qualification: {{ fac_data.qualification}} <br> Subject Specialist: {{ fac_data.subject_speciality }}
+
+                </p>
+            </article>
+    </div>
+    <div class="table-col">
+        <h3>Projects/Assignments/Test</h3>
+    </div>
+</div>
+
+
+{% endblock content %}

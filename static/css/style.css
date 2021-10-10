@@ -1,0 +1,142 @@
+.apna {
+    color: blue;
+    text-transform: uppercase;
+    display: block;
+}
+
+.fonts {
+    color: #FFFDD0;
+    font-size: 15px;
+    font-weight: 350;
+    letter-spacing: 2px;
+    margin-bottom: -10px;
+    margin: 0px 6px;
+    position: relative;
+    animation: text 3s 1;
+}
+
+.fonts1 {
+    color: #FFFDD0;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: -10px;
+    margin: 0px 6px;
+    position: relative;
+    animation: text 3s 1;
+}
+
+@keyframes text {
+    0% {
+        margin-bottom: -10px;
+    }
+    30% {
+        letter-spacing: 5px;
+        margin-bottom: -10px;
+    }
+    85% {
+        letter-spacing: 2px;
+        margin-bottom: -10px;
+    }
+}
+
+.form-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 80px auto auto 30px;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 480px;
+}
+
+.form-box:before {
+    background-image: url("../images/school_background.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    filter: blur(2px);
+}
+
+.form-box input {
+    margin: 0px 0px 12px 0px;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+    font-family: poppins;
+}
+
+
+}
+.form-box label:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #ddd;
+}
+.form-box input[type=checkbox]:checked+label:before {
+    content: "\2713";
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    line-height: 20px;
+}
+.form-box span {
+    font-size: 14px;
+}
+.form-box button {
+    background-color: deepskyblue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    margin: 20px 0px 0px 0px;
+}
+.form-box h3 {
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    padding: 5px;
+    color: white;
+    text-shadow: 1px 1px #00ff00;
+}
+span a {
+    color: #BBB;
+}
+.navbar a {
+    font-family: Verdana !important;
+}
+.navbar a:hover {
+    border-bottom: 3px solid green;
+}
+.studentlist {
+    margin: 30px auto auto 30px;
+    left: 20px;
+    right: auto;
+    top: 100px;
+    border: 1px dotted violet;
+}
+.searchform {
+    position: static;
+}

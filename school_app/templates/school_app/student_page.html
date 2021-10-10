@@ -1,0 +1,29 @@
+{% extends 'school_app/base_page.html' %} {% load static %} {% block content %} 
+
+
+
+<div class="my-4 container d-flex justify-content-between">
+    <div class="table-col">
+        <div class="card" style="width: 10rem;">
+            <figure>
+                <img class="card-img-top" src="{% static 'images/zama_aks.jpg' %}" alt="Card image cap">
+                <figcaption><small>Name:</small> {{ st_data.student_name }}</figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class="table-col" style="width: 45%; border-left: 1px solid black; border-right: 1px solid black; padding: 5px;">
+        <h3>Profile</h3>
+        <article>
+            <p class="text-lg m-3">
+                Roll Number: <br> <b style="border: 2px solid green">{{ st_data.user }}</b> <br><br> Grade or Class: {{ st_data.gradeclass }} <br><br> Email Id: {{ st_data.email_id }} <br><br> Phone Number: +92{{ st_data.student_phone }} <br><br> Field Of Study: {{ st_data.field_of_study }}
+
+            </p>
+        </article>
+    </div>
+    <div class="table-col">
+        <h3>Projects/Assignments/Test</h3>
+    </div>
+
+</div>
+<hr> 
+{% endblock content %}
